@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "狗狗拼团",
+    "slug": "doggy-meetup",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.doggymeetup.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "需要获取您的位置以显示附近的聚会地点",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "需要获取您的位置以显示附近的聚会地点",
+        "UIBackgroundModes": ["location", "fetch"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.doggymeetup.app",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      ["@rnmapbox/maps", {
+        "RNMapboxMapsImpl": "mapbox"
+      }],
+      ["expo-location", {
+        "locationWhenInUsePermission": "需要获取您的位置以显示附近的聚会地点",
+        "backgroundMode": true
+      }]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
