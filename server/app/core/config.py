@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     # API
     API_V1_PREFIX: str = "/api/v1"
     PROJECT_NAME: str = "Doggy Meetup API"
+    DEBUG: bool = False
 
     # Security
     SECRET_KEY: str = "your-secret-key-change-in-production"
